@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Feathr</h1>
+    <p>
+      Login Page:
+    </p>
+    <form name="loginForm" method="post" action="login.php">
+      <table width="20%" align="center">
+
+        <tr>
+          <td colspan=2><center>Feathr Login</center></td>
+        </tr>
+
+        <tr>
+          <td>Username:</td>
+          <td><input type="text" size=25 name="user"></td>
+        </tr>
+
+        <tr>
+          <td>Password:</td>
+          <td><input type="Password" size=25 name="userpw"></td>
+        </tr>
+
+        <tr>
+          <td><form action=newacct.html>
+            <input type="submit" value="New Account"/>
+            </form></td>
+          <td><input type="submit" onclick="checkLogin()" value="Login"></td>
+        </tr>
+
+      </table>
+    </form>
+  </body>
+</html>
