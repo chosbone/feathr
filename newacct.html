@@ -9,10 +9,10 @@
   <body>
     <h1>Make an account!</h1>
     <p></p>
-    <form>
+    <form name="upload" action="newLogin.php" method="post">
       <fieldset id="name">
         Username:<br>
-        <input type="text" name="fname" required><br>
+        <input type="text" name="uname" required autofocus><br>
       </fieldset>
       <fieldset id="name">
         Email:<br>
@@ -20,11 +20,11 @@
       </fieldset>
       <fieldset id="name">
         Password:<br>
-        <input type="text" name="pass" required><br>
+        <input type="Password" name="pass" required><br>
       </fieldset>
       <fieldset id="name">
         Verify Password:<br>
-        <input type="text" name="vpass" required><br>
+        <input type="Password" name="vpass" required><br>
       </fieldset>
       <input type="submit">
     
