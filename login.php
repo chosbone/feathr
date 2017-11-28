@@ -25,8 +25,10 @@
 	?>
 	
 	<?php
+
 	//establish connection
-	$link = mysqli_connect("localhost", "root", "", "feathr");
+	//$link = mysqli_connect("localhost", "root", "", "feathr");
+	require('connect.php');
 	
 	$username = checkData($_POST['user']);	
 	$password = checkData($_POST['userpw']);
@@ -72,9 +74,9 @@
 	
 	
 	// Check connection
-	if($link === false){
-		die("ERROR: Could not connect. " . mysqli_connect_error());
-	}
+	//if($link === false){
+	//	die("ERROR: Could not connect. " . mysqli_connect_error());
+	//}
 	
 	
 	
