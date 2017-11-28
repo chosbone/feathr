@@ -26,12 +26,14 @@
 	
 	<?php
 
-	//establish connection
-	//$link = mysqli_connect("localhost", "root", "", "feathr");
+	//start session
+	session_start();
+	
 	require('connect.php');
 	
 	$username = checkData($_POST['user']);	
 	$password = checkData($_POST['userpw']);
+	
 	
 	//search database for user/passhash --> returns object
 	$sqlUser = "SELECT username FROM `usertable` WHERE username = '$username'";
@@ -62,6 +64,14 @@
 		echo "Password = $password"."<br>";
 		echo "PassHash = $hashSql"."<br>";
 		echo "Values from mysql USER = $userSql  HASH = $hashSql";
+		//sets cookie when username is correct
+		//set session name for cookies
+		$cookie_name = 'username';
+		$cookie_value = $username;
+		setcookie($cookie_name, $cookie_value);
+		
+		header('Location: testerpage.php');
+		
 	}
 	else{
 		echo "USERNAME AND PASSWORD NOT VALID!!!";
@@ -78,8 +88,7 @@
 	//	die("ERROR: Could not connect. " . mysqli_connect_error());
 	//}
 	
-	
-	
+
 	?>
 	
 	</body>
