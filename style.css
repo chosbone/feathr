@@ -1,9 +1,10 @@
 /* Fonts from Google Fonts - more at https://fonts.google.com */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 
 body {
-  background-color: white;
+  background-color: #ccedf0;
   font-family: "Open Sans", sans-serif;
   padding: 5px 25px;
   font-size: 18px;
@@ -15,3 +16,81 @@ h1 {
   font-family: "Merriweather", serif;
   font-size: 32px;
 }
+
+/*button styling*/
+input[type=submit],
+input[type=button]{
+  padding: 8px 15px 8px 15px;
+  background: #31ccda;
+  margin-left: 2px;
+  color: #ffffff;
+  box-shadow: 1px 1px 4px #DADADA;
+  -moz-box-shadow: 1px 1px 4px #DADADA;
+  -webkit-box-shadow: 1px 1px 4px #DADADA;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+
+input {
+  text-align: center;
+  background-color: #ECF0F1;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px 0;
+  width: 250px;
+  transition: border .5s;
+}
+
+input:focus {
+  border: 2px solid #3498DB;
+  box-shadow: none;
+}
+
+/*link stuff*/
+/* unvisited link */
+a:link {
+  color: #1c4c7a;
+  text-align: center;
+  font-size: 16px;
+  margin-right: 2px;
+  margin-top: -10px;
+  
+}
+/* mouse over link */
+a:hover {
+  color: hotpink;
+  font-size: 16px;
+}
+
+#title{
+  font-family: lobster;
+  font-size: 100px;
+}
+
+#titlereg{
+  font-family: lobster;
+  font-size: 80px;
+  text-align:center;
+}	
+
+#registerlink{
+  text-align: right;
+}
+
+h1{
+  font-family: lobster;
+  font-size: 100px;	
+}	
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+

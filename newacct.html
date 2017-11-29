@@ -7,27 +7,39 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Make an account!</h1>
-    <p></p>
+	<div class = "centered">
     <form name="upload" action="newLogin.php" method="post">
-      <fieldset id="name">
-        Username:<br>
-        <input type="text" name="uname" required autofocus><br>
-      </fieldset>
-      <fieldset id="name">
-        Email:<br>
-        <input type="text" name="email" required><br>
-      </fieldset>
-      <fieldset id="name">
-        Password:<br>
-        <input type="Password" name="pass" required><br>
-      </fieldset>
-      <fieldset id="name">
-        Verify Password:<br>
-        <input type="Password" name="vpass" required><br>
-      </fieldset>
-      <input type="submit">
-    
+      <table width="20%" align="center">
+	  
+		<tr id = "titlereg">
+          <td colspan=2><center>Register</center></td>
+        </tr>
+	  
+	  
+		<tr>
+			<td><input type="text" name="uname" required autofocus placeholder="enter a username" size=25></td>
+		 
+		</tr>
+		
+      <tr>
+			<td><input type="text" name="email" required placeholder="enter your email" size=25></td>
+		
+      </tr>
+	  
+      <tr>
+			<td><input type="Password" name="pass" required placeholder="create a password" size=25></td>
+      </tr>
+	  
+      <tr>
+			<td><input type="Password" name="vpass" required placeholder="verify your password" size=25></td>
+      </tr>
+	  
+      <tr>
+          <td><input type="submit"></td>
+      </tr>
+		
+    </table>
     </form>
+	</div>
   </body>
 </html>

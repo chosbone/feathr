@@ -7,33 +7,38 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Feathr</h1>
-    <p>
-      Login Page:
-    </p>
+    
+    <div class = "centered">
     <form name="loginForm" method="post" action="login.php">
       <table width="20%" align="center">
+        
+
+        <tr id = "title">
+          <td colspan=2><center>Feathr</center></td>
+        </tr>
+
 
         <tr>
-          <td colspan=2><center>Feathr Login</center></td>
+          <td><input type="text" size=25 name="user" placeholder="username"></td>
+        </tr>
+
+
+        <tr>
+          <td><input type="Password" size=25 name="userpw" placeholder="password"></td>
         </tr>
 
         <tr>
-          <td>Username:</td>
-          <td><input type="text" size=25 name="user"></td>
-        </tr>
-
-        <tr>
-          <td>Password:</td>
-          <td><input type="Password" size=25 name="userpw"></td>
-        </tr>
-
-        <tr>
-          <td><a href="newacct.html">Make an Account</a></td>
           <td><input type="submit" value="Login"></td>
         </tr>
+        
+        
+        <tr id = "registerlink">
+          <td><a href="newacct.html">register</a></td>
+        </tr>
 
+           
       </table>
     </form>
+    </div>
   </body>
 </html>
