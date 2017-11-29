@@ -68,9 +68,9 @@
 		//set session name for cookies
 		$cookie_name = 'username';
 		$cookie_value = $username;
-		setcookie($cookie_name, $cookie_value);
+		setcookie($cookie_name, $cookie_value, time() + (60 * 20));
 		
-		header('Location: testerpage.php');
+		header('Location: channel.html');
 		
 	}
 	else{

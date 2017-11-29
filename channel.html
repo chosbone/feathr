@@ -10,7 +10,29 @@
 
 <div id="wrap" class="menu">
 	<div id="menu">
-		<p id="welcome">Welcome, <b></b></p>
+		<p id="welcome">Welcome, 
+		<!-- JS to get username cookie -->
+			<script type="text/javascript"> 
+				function getCookie(cname) {
+					var name = cname + "=";
+					var ca = document.cookie.split(';');
+					for(var i = 0; i < ca.length; i++) {
+						var c = ca[i];
+						while (c.charAt(0) == ' ') {
+							c = c.substring(1);
+						}
+						if (c.indexOf(name) == 0) {
+							return c.substring(name.length, c.length);
+						}
+					}
+					return "";
+				}
+				
+				document.write(getCookie("username"));
+				console.log("kill me");
+			</script>
+			
+		<b></b></p>
 		<p id="logout"><a href="index.html">Logout</a></p>
 		<div style="clear:both"></div>
 	</div>
