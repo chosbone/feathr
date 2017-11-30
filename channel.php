@@ -76,6 +76,7 @@
 		//console.log(clientmsg);
 		$.post("post.php", {text: clientmsg});
 		$("#usermsg").attr("value", "");
+		loadLog();
 		return false;
 	
 	});
