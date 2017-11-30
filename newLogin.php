@@ -108,6 +108,7 @@
 	if($allCheck){
 		if(mysqli_query($link, $sql)){
 			echo "Account Created!";
+			header('Location: index.html')
 		} 
 	}	
 	else{

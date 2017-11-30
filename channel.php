@@ -33,7 +33,16 @@
 			</script>
 			
 		<b></b></p>
-		<p id="logout"><a href="index.html">Logout</a></p>
+		<p id="logout"><a href="?link=1" name="link1">Logout</a></p>
+		<?php
+		//code to switch to index page and unset cookie
+		$link=$_GET['link'];
+        if ($link == '1'){
+			unset($_COOKIE['username']);
+            header('Location: index.html');
+        }
+		
+		?>
 		<div style="clear:both"></div>
 	</div>
 </div>
