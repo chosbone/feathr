@@ -29,20 +29,12 @@
 				}
 				
 				document.write(getCookie("username"));
-				console.log("kill me");
 			</script>
 			
 		<b></b></p>
-		<p id="logout"><a href="?link=1" name="link1">Logout</a></p>
-		<?php
-		//code to switch to index page and unset cookie
-		$link=$_GET['link'];
-        if ($link == '1'){
-			unset($_COOKIE['username']);
-            header('Location: index.html');
-        }
-		
-		?>
+			<form action="logout.php" method="post">
+				<input type="submit" name="logoutButton" value="Logout">
+			</form>
 		<div style="clear:both"></div>
 	</div>
 </div>
