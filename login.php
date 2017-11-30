@@ -70,7 +70,7 @@
 		$cookie_value = $username;
 		setcookie($cookie_name, $cookie_value, time() + (60 * 20));
 		
-		header('Location: channel.html');
+		header('Location: channel.php');
 		
 	}
 	else{

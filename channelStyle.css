@@ -16,12 +16,14 @@ body {
 }
 
 .chatbox {
-	width:85%;
+	width:83%;
 	height:88vh;
+	overflow-y:scroll;
+	word-wrap:break-word;
 }
 
 .message {
-	width:85%;
+	width:98%;
 	height:10vh;
 }
 
