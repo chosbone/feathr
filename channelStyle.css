@@ -1,11 +1,19 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
 body {
 	margin:0px auto;
+	background-color: #31ccda;
 }
 
 #wrap {
 	font-size:16px;
-	background:#31ccda;
+	background-color: #ccedf0;
 	border: 5px solid #000000;	
+	border-radius: 10px;
+	border-color: #31ccda;
 }
 
 .menu {
@@ -13,6 +21,9 @@ body {
 	float:left;
 	width:15%;
 	height:99vh;
+	border-radius: 10px;
+	border-color: #31ccda;
+	font-family: lobster;
 }
 
 .chatbox {
@@ -25,12 +36,19 @@ body {
 .message {
 	width:98%;
 	height:10vh;
+	padding-left: 10px;
+	
 }
 
 #message {
 	margin: auto;
 	text-align:center;
 	padding-left:20px;
-	padding-top:6px;
+	/* padding-top:6px; */
+	background-color: #ccedf0;
+	border-bottom:10px;
+	margin-top:16px;
 }
+
+	
 	

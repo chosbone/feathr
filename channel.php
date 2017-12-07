@@ -29,11 +29,12 @@
 				}
 				
 				document.write(getCookie("username"));
-				console.log("kill me");
 			</script>
 			
 		<b></b></p>
-		<p id="logout"><a href="index.html">Logout</a></p>
+			<form action="logout.php" method="post">
+				<input type="submit" name="logoutButton" value="Logout">
+			</form>
 		<div style="clear:both"></div>
 	</div>
 </div>
