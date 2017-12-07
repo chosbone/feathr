@@ -69,7 +69,7 @@
 		$cookie_name = 'username';
 		$cookie_value = $username;
 		setcookie($cookie_name, $cookie_value, time() + (60 * 20));
-		
+		$_SESSION["error"]=false;
 		header('Location: channel.php');
 		
 	}
@@ -79,7 +79,8 @@
 		echo "Password = $password"."<br>";
 		echo "PassHash = $hashSql"."<br>";
 		echo "Values from mysql USER = $userSql  HASH = $hashSql"."<br>";
-		
+		$_SESSION["error"]=true;
+		header('Location: index.php');	
 	}	
 	
 	
