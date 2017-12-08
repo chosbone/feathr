@@ -9,6 +9,7 @@
   <body>
   
 	<?php
+	session_start();
 	function checkData($data, $problem='')
 	{
     $data = trim($data);
@@ -58,7 +59,11 @@
 		} 
 	}
 	if($userSql === $username){
+		$_SESSION["errorUser"]=true;
+
 		$userInTable = true;	
+	} else {
+		$_SESSION["errorUser"]=false;
 	}
 	
 	
@@ -77,11 +82,17 @@
 	if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 		echo "$email is a valid email address"."<br>";
 		$emailCheck = true;
+		$_SESSION["errorEmail"]=false;
+
 	} else {
+		$_SESSION["errorEmail"]=true;
+
 		echo "$email is not a valid email address"."<br>";
 	}
 	// Compare Passwords
 	if($pass === $vpass){
+		$_SESSION["errorPass"]=false;
+	
 		$passCheck = true;
 	}
 	
@@ -96,23 +107,35 @@
 		$allCheck = true;
 	}
 	elseif(!$emailCheck){
+		$_SESSION["errorEmail"]=true;
+
 		echo "Email is not valid!"."<br>";
 	}
 	elseif($userInTable){
+		$_SESSION["errorUser"]=true;
+
 		echo "Username is already taken!"."<br>";
 	}
 	else{
+		$_SESSION["errorPass"]=true;
+
 		echo "Passwords do not match!"."<br>";
 	}
 	
 	if($allCheck){
 		if(mysqli_query($link, $sql)){
+		$_SESSION["errorUser"]=false;
+		$_SESSION["errorEmail"]=false;
+		$_SESSION["errorPass"]=false;
+
+			
 			echo "Account Created!";
-			header('Location: index.html')
+			header('Location: index.html');
 		} 
 	}	
 	else{
 		echo "Account not created! Please correct your inputs!";
+		header('Location: newacct.php');
 	}
 	
 	?>
